@@ -1,6 +1,9 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 @import '~bootstrap-icons/font/bootstrap-icons.css';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
 @font-face {
     font-family: Jost;
@@ -8,6 +11,22 @@
     font-style: normal;
     font-weight: 100 900;
 
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    line-height: 1.8;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+br {
+    line-height: 1em;
+}
+
+.theme {
+    background-color: #ffffff;
+    color: #FC5356;
 }
 
 h1 {
@@ -58,17 +77,164 @@ a {
     line-height: 45px;
     position: relative;
     display: inline-block;
-    border: 3px solid #ffffff;
+    border: 3px solid #fc5356;
     border-radius: 5px;
     font-size: 20px;
-    background: linear-gradient(to right, white 50%, transparent 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, #fc5356 50%, white 50%);
+    background-size: 200% 105%;
     background-position: right bottom;
-    color: #ffffff;
+    color: #fc5356;
     transition: all .35s ease-out;
 }
 
+.white {
+    background: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 200% 105%;
+    background-position: right bottom;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+
 .px-btn:hover {
-    background-position: left bottom;
+    background-position: 0px 3px;
+    color: #fff;
+}
+
+.white:hover {
+    background-position: 0px 3px;
     color: #2c2c2c;
+}
+
+.go-to-next {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 44px;
+    z-index: 1;
+    margin: auto;
+    border-radius: 50%;
+    border-color: #FC5356;
+    background-color: #FC5356;
+    color: #ffffff;
+    text-align: center;
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0% {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
+
+.section-title h2 {
+    font-family: Jost, sans-serif;
+    color: #000;
+    font-size: 60px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+}
+
+.section-title.text-center h2:after {
+    right: 0;
+    margin: auto;
+}
+
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 75px;
+    height: 2px;
+    background: #fc5356;
+}
+
+h3 {
+    font-family: Jost, sans-serif;
+    color: #000;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.about-text h6 {
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.about-text p mark {
+    font-weight: 600;
+    color: #000;
+    background-color: #ffffff;
+}
+
+mark {
+    background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-color: transparent;
+    padding: 5;
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-list label {
+    color: #000;
+    font-weight: 600;
+    width: 155px;
+    margin: 0;
+    position: relative;
+}
+
+.about-list label:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 11px;
+    width: 1px;
+    height: 12px;
+    background: #000;
+    transform: rotate(15deg);
+    margin: auto;
+    opacity: 0.5;
+}
+
+.feature-box-1 {
+    padding: 50px 30px;
+    margin: 15px 0 35px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.feature-box-1 .icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: #fc5356;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 39px;
+    box-shadow: -11px -11px rgba(252, 83, 86, 0.11);
 }
